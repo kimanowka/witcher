@@ -1,0 +1,53 @@
+    <aside className='questsBlocks'>
+        <h1 className='text-center'>Меню</h1>
+        <ul className='menu-ul-drop'>
+            <li>
+                <Link className='questsLinks' to="/quest/mainQuests">
+                    <img src={mainQuest} alt="mainQuest"/>
+                    <h1 className='questsLinks__title'>Основные квесты</h1>
+                </Link>
+            </li>
+            <li>
+                <Link className='questsLinks' to="/quest/secondQuests">
+                    <img src={secondQuests} alt="secondQuest"/>
+                    <h1 className='questsLinks__title'>Побочные квесты</h1>
+                </Link>
+            </li>
+            <li>
+                <Link className='questsLinks' to="/quest/antiquities">
+                    <img src={antiquitiesQuests} alt="antiquities"/>
+                    <h1 className='questsLinks__title'>Ведьмачьи древности</h1>
+                </Link>
+            </li>
+        </ul>
+    </aside>
+
+
+    .questsBlocks
+      display: flex
+      flex-direction: column
+      align-items: start
+
+    .questsBlocks img
+      width: 480px
+      border-radius: 20px
+      position: relative
+      box-shadow: 0 5px 8px rgb(0 0 0 / 26%)
+      transition: 1s
+
+    .questsLinks
+      margin: 20px 10px
+      padding: 10px 5px
+      &__title
+        position: absolute
+        margin-top: -50px
+    .questsLinks:hover img
+      box-shadow: 0 5px 8px rgb(0 0 0 / 80%)
+      transform: scale(1.04)
+    .questsLinks:hover .questsLinks__title
+      color: #d9ae42
+      background-image: -webkit-gradient(linear,left top,right top,from(#e8cd64),to(#d9ae42))
+      background-image: linear-gradient(to right,#e8cd64,#d9ae42)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      text-shadow: 1px 1px 1px rgb(0 0 0 / 10%)
